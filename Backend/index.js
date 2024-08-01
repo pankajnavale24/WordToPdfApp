@@ -8,9 +8,7 @@ const cors = require('cors');
 const fs = require('fs');
 
 // CORS configuration
-app.use(cors({
-    origin: 'https://word-to-pdf-app-ublr.vercel.app'
-}));
+app.use(cors());
 
 // Setting up the file storage
 const storage = multer.diskStorage({
