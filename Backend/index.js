@@ -6,7 +6,11 @@ const docxToPDF = require('docx-pdf');
 const path = require('path')
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors(
+    {
+        origin : ["https://word-to-pdf-app-ublr.vercel.app"]
+    }
+));
 
 // setting up the file storage
 const storage = multer.diskStorage({
