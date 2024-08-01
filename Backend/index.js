@@ -22,6 +22,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 app.post('/convertFile', upload.single('file'), (req, res, next) => {
     try {
         if (!req.file) {
