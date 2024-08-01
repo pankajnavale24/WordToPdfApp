@@ -22,7 +22,7 @@ export default function Home() {
     formData.append("file", selectedfile);
     try {
       const response = await axios.post(
-        "word-to-pdf-app-64vp.vercel.app/convertFile",
+        "https://word-to-pdf-app-64vp.vercel.app/convertFile",
         formData,
         {
           responseType: "blob",
